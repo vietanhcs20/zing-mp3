@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/Icons/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+
+<body>
+    <div class="app wide">
+        <!-- Sidebar -->
+        <div class="sidebar small">
+            <div class="sidebar__logo hide-on-mobile">
+                <a class="sidebar__logo-link" href="#">
+                    <img src="./assets/img/logos/main-logo.svg">
+                    <img src="./assets/img/logos/small-logo.svg" alt="">
+                </a>
+            </div>
+            <ul class="sidebar__list">
+                <li class="sidebar__list-item ">
+                    <a href="#" class="sidebar__list-item-link">
+                        <i class="sidebar__list-icon fa-regular fa-file-audio"></i>
+                        <span class="sidebar__list-name">Cá Nhân</span>
+                        <i class="sidebar__play-icon hide-on-mobile-tablet fa-regular fa-circle-play"></i>
+                    </a>
+                </li>
+                <li class="sidebar__list-item active">
+                    <a href="#" class="sidebar__list-item-link">
+                        <i class="sidebar__list-icon bi bi-vinyl"></i>
+                        <span class="sidebar__list-name">Khám Phá</span>
+                    </a>
+
+                </li>
+                <li class="sidebar__list-item">
+                    <a href="#" class="sidebar__list-item-link">
+                        <i class="sidebar__list-icon bi bi-music-note-list"></i>
+                        <span class="sidebar__list-name">#zingchart</span>
+                        <i class="sidebar__play-icon hide-on-mobile-tablet fa-regular fa-circle-play"></i>
+                    </a>
+
+                </li>
+                <li class="sidebar__list-item">
+                    <a href="#" class="sidebar__list-item-link">
+                        <ion-icon class="sidebar__list-icon" name="radio-outline"></ion-icon>
+                        <span class="sidebar__list-name">Radio</span>
+                        <div class="living-container hide-on-mobile-tablet">
+                            <span>LIVE</span>
+                        </div>
+                        <i class="sidebar__play-icon hide-on-mobile-tablet fa-regular fa-circle-play"></i>
+                    </a>
+
+                </li>
+                <li class="sidebar__list-item">
+                    <a href="#" class="sidebar__list-item-link">
+                        <ion-icon class="sidebar__list-icon" name="newspaper-outline"></ion-icon>
+                        <span class="sidebar__list-name">Theo Dõi</span>
+                    </a>
+
+                </li>
+            </ul>
+            <div class="sidebar__scroll-container hide-on-mobile">
+                <div class="sidebar__scroll">
+                    <ul class="sidebar__list">
+                        <li class="sidebar__list-item ">
+                            <a href="#" class="sidebar__list-item-link">
+                                <ion-icon class="sidebar__list-icon" name="musical-notes-outline"></ion-icon>
+                                <span class="sidebar__list-name">Nhạc Mới</span>
+                                <i class="sidebar__play-icon hide-on-mobile-tablet fa-regular fa-circle-play"></i>
+                            </a>
+                        </li>
+                        <li class="sidebar__list-item">
+                            <a href="#" class="sidebar__list-item-link">
+                                <ion-icon class="sidebar__list-icon" name="grid-outline"></ion-icon>
+                                <span class="sidebar__list-name">Thể Loại</span>
+                            </a>
+
+                        </li>
+                        <li class="sidebar__list-item">
+                            <a href="#" class="sidebar__list-item-link">
+                                <ion-icon class="sidebar__list-icon" name="star-outline"></ion-icon>
+                                <span class="sidebar__list-name">Top 100</span>
+                            </a>
+
+                        </li>
+                        <li class="sidebar__list-item">
+                            <a href="#" class="sidebar__list-item-link">
+                                <ion-icon class="sidebar__list-icon" name="film-outline"></ion-icon>
+                                <span class="sidebar__list-name">MV</span>
+
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="sidebar__banner-vip-container">
+                        <div class="sidebar__banner-vip">
+                            <h3 class="sidebar__banner-heading">
+                                Nghe nhạc không quảng cáo cùng kho nhạc VIP
+                            </h3>
+                            <a href="#" class="sidebar__banner-link" target="__blank">
+                                <span>Mua Vip</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar__library">
+                        <h3 class="sidebar__library-heading">
+                            <span class="library-heading-name">Thư viện</span>
+                            <span class="library-heading-icon-container">
+                                <ion-icon class="library-heading-icon" name="pencil-outline"></ion-icon>
+                            </span>
+                        </h3>
+                        <ul class="sidebar__library-list">
+                            <li class="sidebar__library-item">
+                                <a href="#" class="sidebar__library-link">
+                                    <img class="sidebar__library-img"
+                                        src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.0.13/static/media/my-song.cf0cb0b4.svg">
+                                    <span class="sidebar__library-name">Bài hát</span>
+                                    <i class="sidebar__play-icon hide-on-mobile-tablet fa-regular fa-circle-play"></i>
+                                </a>
+                            </li>
+                            <li class="sidebar__library-item">
+                                <a href="#" class="sidebar__library-link">
+                                    <img class="sidebar__library-img"
+                                        src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.0.13/static/media/my-playlist.7e92a5f0.svg">
+                                    <span class="sidebar__library-name">Playlist</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__library-item">
+                                <a href="#" class="sidebar__library-link">
+                                    <img class="sidebar__library-img"
+                                        src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.0.13/static/media/my-history.374cb625.svg">
+                                    <span class="sidebar__library-name">Gần đây</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="sidebar__playlist-personal">
+                            <li class="sidebar__playlist-item">
+                                <a href="#" class="sidebar__playlist-link">
+                                    <span class="sidebar__playlist-name">Tháng 1</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__playlist-item">
+                                <a href="#" class="sidebar__playlist-link">
+                                    <span class="sidebar__playlist-name">Nhạc Quốc Tế</span>
+
+                                </a>
+                            </li>
+                            <li class="sidebar__playlist-item">
+                                <a href="#" class="sidebar__playlist-link">
+                                    <span class="sidebar__playlist-name">Nhạc Lofi</span>
+                                </a>
+                            </li>
+                            <li class="sidebar__playlist-item">
+                                <a href="#" class="sidebar__playlist-link">
+                                    <span class="sidebar__playlist-name">Nhạc Trẻ</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar__create-playlist hide-on-mobile-tablet">
+                <ion-icon class="sidebar__create-playlist-icon" name="add-outline"></ion-icon>
+                <h3 class="sidebar__create-playlist-heading">Tạo playlist mới</h3>
+            </div>
+            <div class="sidebar__menu-switch hide-on-mobile">
+                <span class="sidebar__menu-switch-btn">
+                    <ion-icon class="sidebar__menu-switch-icon" name="chevron-back-outline"></ion-icon>
+                </span>
+                <span class="sidebar__menu-switch-btn ">
+                    <ion-icon class="sidebar__menu-switch-icon" name="chevron-forward-outline"></ion-icon>
+                </span>
+            </div>
+        </div>
+
+        <!-- Container -->
+        <div class="container grid">
+            <div class="container-overlay">
+                <header class="header">
+                    <div class="header-container">
+                        <div class="header__with-search">
+                            <div class="header__arrows-navigation hide-on-mobile">
+                                <span>
+                                    <ion-icon class="header__arrows-icon header__arrows-icon-can-click"
+                                        name="arrow-back-outline">
+                                    </ion-icon>
+                                </span>
+                                <span>
+                                    <ion-icon class="header__arrows-icon " name="arrow-forward-outline">
+                                    </ion-icon>
+                                    </ion-icon>
+                                </span>
+                            </div>
+
+                            <div class="header__input-search-container">
+
+                                <div class="header__input-search">
+                                    <i class="header__input-search-icon bi bi-search"></i>
+                                    <input type="text" class="header__input-search-place"
+                                        placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV...">
+
+                                    <div class="header__input-search-history">
+                                        <h3 class="header__search-history-heading">Đề xuất cho bạn</h3>
+                                        <ul class="header__search-history-list">
+                                            <li class="header__search-history-item">
+                                                <a href="#" class="header__search-history-link">
+                                                    <i
+                                                        class="header__search-history-icon fa-solid fa-arrow-trend-up"></i>
+                                                    <span class="header__search-history-name">Tình bạn diệu kì</span>
+                                                </a>
+                                            </li>
+                                            <li class="header__search-history-item">
+                                                <a href="#" class="header__search-history-link">
+                                                    <i
+                                                        class="header__search-history-icon fa-solid fa-arrow-trend-up"></i>
+                                                    <span class="header__search-history-name">Gác lại âu lo</span>
+                                                </a>
+                                            </li>
+                                            <li class="header__search-history-item">
+                                                <a href="#" class="header__search-history-link">
+                                                    <i
+                                                        class="header__search-history-icon fa-solid fa-arrow-trend-up"></i>
+                                                    <span class="header__search-history-name">Hongkong1</span>
+                                                </a>
+                                            </li>
+                                            <li class="header__search-history-item">
+                                                <a href="#" class="header__search-history-link">
+                                                    <i
+                                                        class="header__search-history-icon fa-solid fa-arrow-trend-up"></i>
+                                                    <span class="header__search-history-name">#zingchart</span>
+                                                </a>
+                                            </li>
+                                            <li class="header__search-history-item">
+                                                <a href="#" class="header__search-history-link">
+                                                    <i
+                                                        class="header__search-history-icon fa-solid fa-arrow-trend-up"></i>
+                                                    <span class="header__search-history-name">Cheating on You</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="header__nav-button">
+                                <ul class="header__nav-button-list">
+                                    <li class="header__nav-button-item">
+                                        <label for="check-for-modal" class="modal-open">
+                                            <svg width="20" height="20" class="header__nav-icon" viewBox="0 0 20 20">
+                                                <defs>
+                                                    <linearGradient id="j32lhg93hd" x1="62.206%" x2="18.689%"
+                                                        y1="70.45%" y2="39.245%">
+                                                        <stop offset="0%" stop-color="#F81212"></stop>
+                                                        <stop offset="100%" stop-color="red"></stop>
+                                                    </linearGradient>
+                                                    <linearGradient id="hjoavsus6g" x1="50%" x2="11.419%" y1="23.598%"
+                                                        y2="71.417%">
+                                                        <stop offset="0%" stop-color="#00F"></stop>
+                                                        <stop offset="100%" stop-color="#0031FF"></stop>
+                                                    </linearGradient>
+                                                    <linearGradient id="la1y5u3dvi" x1="65.655%" x2="25.873%"
+                                                        y1="18.825%" y2="56.944%">
+                                                        <stop offset="0%" stop-color="#FFA600"></stop>
+                                                        <stop offset="100%" stop-color="orange"></stop>
+                                                    </linearGradient>
+                                                    <linearGradient id="2dsmrlvdik" x1="24.964%" x2="63.407%"
+                                                        y1="8.849%" y2="55.625%">
+                                                        <stop offset="0%" stop-color="#13EFEC"></stop>
+                                                        <stop offset="100%" stop-color="#00E8DF"></stop>
+                                                    </linearGradient>
+                                                    <filter id="4a7imk8mze" width="230%" height="230%" x="-65%" y="-65%"
+                                                        filterUnits="objectBoundingBox">
+                                                        <feGaussianBlur in="SourceGraphic" stdDeviation="3.9">
+                                                        </feGaussianBlur>
+                                                    </filter>
+                                                    <filter id="301mo6jeah" width="312.7%" height="312.7%" x="-106.4%"
+                                                        y="-106.4%" filterUnits="objectBoundingBox">
+                                                        <feGaussianBlur in="SourceGraphic" stdDeviation="3.9">
+                                                        </feGaussianBlur>
+                                                    </filter>
+                                                    <filter id="b2zvzgq7fj" width="295%" height="295%" x="-97.5%"
+                                                        y="-97.5%" filterUnits="objectBoundingBox">
+                                                        <feGaussianBlur in="SourceGraphic" stdDeviation="3.9">
+                                                        </feGaussianBlur>
+                                                    </filter>
+                                                    <filter id="a1wq161tvl" width="256%" height="256%" x="-78%" y="-78%"
+                                                        filterUnits="objectBoundingBox">
+                                                        <feGaussianBlur in="SourceGraphic" stdDeviation="3.9">
+                                                        </feGaussianBlur>
+                                                    </filter>
+                                                    <path id="qtpqrj1oda"
+                                                        d="M3.333 14.167V5.833l-1.666.834L0 3.333 3.333 0h3.334c.04 1.57.548 2.4 1.524 2.492l.142.008C9.403 2.478 9.958 1.645 10 0h3.333l3.334 3.333L15 6.667l-1.667-.834v8.334h-10z">
+                                                    </path>
+                                                    <path id="jggzvnjgfc" d="M0 0H20V20H0z"></path>
+                                                    <path id="2eiwxjmc7m"
+                                                        d="M3.333 14.167V5.833l-1.666.834L0 3.333 3.333 0h3.334c.04 1.57.548 2.4 1.524 2.492l.142.008C9.403 2.478 9.958 1.645 10 0h3.333l3.334 3.333L15 6.667l-1.667-.834v8.334h-10z">
+                                                    </path>
+                                                </defs>
+                                                <g fill="none" fill-rule="evenodd" transform="translate(2 3)">
+                                                    <mask id="tinejqaasb" fill="#fff">
+                                                        <use xlink:href="#qtpqrj1oda"></use>
+                                                    </mask>
+                                                    <use fill="#FFF" fill-opacity="0" xlink:href="#qtpqrj1oda"></use>
+                                                    <g mask="url(#tinejqaasb)">
+                                                        <g transform="translate(-2 -3)">
+                                                            <mask id="uf3ckvfvpf" fill="#fff">
+                                                                <use xlink:href="#jggzvnjgfc"></use>
+                                                            </mask>
+                                                            <use fill="#D8D8D8" xlink:href="#jggzvnjgfc"></use>
+                                                            <circle cx="8.9" cy="6.8" r="9" fill="url(#j32lhg93hd)"
+                                                                filter="url(#4a7imk8mze)" mask="url(#uf3ckvfvpf)">
+                                                            </circle>
+                                                            <circle cx="9.3" cy="13.7" r="5.5" fill="url(#hjoavsus6g)"
+                                                                filter="url(#301mo6jeah)" mask="url(#uf3ckvfvpf)">
+                                                            </circle>
+                                                            <circle cx="15.9" cy="6.9" r="6" fill="url(#la1y5u3dvi)"
+                                                                filter="url(#b2zvzgq7fj)" mask="url(#uf3ckvfvpf)">
+                                                            </circle>
+                                                            <circle cx="16.4" cy="17.7" r="7.5" fill="url(#2dsmrlvdik)"
+                                                                filter="url(#a1wq161tvl)" mask="url(#uf3ckvfvpf)">
+                                                            </circle>
+                                                        </g>
+                                                    </g>
+                                                    <use fill="#FFF" fill-opacity="0.05" xlink:href="#2eiwxjmc7m"></use>
+                                                </g>
+                                            </svg>
+                                        </label>
+
+                                    </li>
+
+                                    <li class="header__nav-button-item hide-on-mobile">
+                                        <input type="file" class="file-upload">
+                                        <i class="header__nav-icon bi bi-upload"></i>
+                                    </li>
+
+                                    <li class="header__nav-button-item setting__btn hide-on-mobile">
+                                        <ion-icon class="header__nav-icon" name="settings-outline">
+                                        </ion-icon>
+
+                                        <ul class="nav__list setting__list">
+                                            <li class="nav__list-item">
+                                                <a href="#" class="nav__list-item-link">
+                                                    <ion-icon class="nav__list-item-icon" name="ban-outline"></ion-icon>
+                                                    <span class="nav__list-name">Danh sách chặn</span>
+                                                </a>
+
+                                            </li>
+                                            <li class="nav__list-item">
+                                                <a href="#" class="nav__list-item-link">
+                                                    <i class="nav__list-item-icon bi bi-badge-hd"></i>
+                                                    <span class="nav__list-name">Chất lượng nhạc</span>
+                                                    <ion-icon class="nav__list-item-arrow"
+                                                        name="chevron-forward-outline">
+                                                    </ion-icon>
+                                                </a>
+
+                                            </li>
+                                            <li class="nav__list-item">
+                                                <a href="#" class="nav__list-item-link">
+                                                    <ion-icon class="nav__list-item-icon" name="play-circle-outline">
+                                                    </ion-icon>
+                                                    <span class="nav__list-name">Trình phát nhạc</span>
+                                                    <ion-icon class="nav__list-item-arrow"
+                                                        name="chevron-forward-outline">
+                                                    </ion-icon>
+                                                </a>
+
+                                            </li>
+                                            <li class="nav__list-item">
+                                                <div class="line"></div>
+                                            </li>
+                                            <li class="nav__list-item">
+                                                <a href="#" class="nav__list-item-link nav__list-item-link-sm">
+                                                    <ion-icon class="nav__list-item-icon"
+                                                        name="information-circle-outline">
+                                                    </ion-icon>
+                                                    <span class="nav__list-name">Giới thiệu</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav__list-item">
+                                                <a href="#" class="nav__list-item-link nav__list-item-link-sm">
+                                                    <ion-icon class="nav__list-item-icon" name="flag-outline">
+                                                    </ion-icon>
+                                                    <span class="nav__list-name">Góp ý</span>
+                                                </a>
+
+                                            </li>
+                                            <li class="nav__list-item">
+                                                <a href="#" class="nav__list-item-link nav__list-item-link-sm">
+                                                    <ion-icon class="nav__list-item-icon" name="call-outline">
+                                                    </ion-icon>
+                                                    <span class="nav__list-name">Liên hệ</span>
+                                                </a>
+
+                                            </li>
+                                            <li class="nav__list-item">
+                                                <a href="#" class="nav__list-item-link nav__list-item-link-sm">
+                                                    <i class="nav__list-item-icon bi bi-badge-ad"></i>
+                                                    <span class="nav__list-name">Quảng cáo</span>
+                                                </a>
+
+                                            </li>
+                                            <li class="nav__list-item">
+                                                <a href="#" class="nav__list-item-link nav__list-item-link-sm">
+                                                    <i class="nav__list-item-icon fa-regular fa-file-lines"></i>
+                                                    <span class="nav__list-name">Thỏa thuận sử dụng</span>
+                                                </a>
+
+                                            </li>
+                                            <li class="nav__list-item">
+                                                <a href="#" class="nav__list-item-link nav__list-item-link-sm">
+                                                    <ion-icon class="nav__list-item-icon"
+                                                        name="shield-checkmark-outline">
+                                                    </ion-icon>
+                                                    <span class="nav__list-name">Chính sách bảo mật</span>
+                                                </a>
+
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="header__nav-button-item header__nav-img">
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </header>
+
+                <!-- Content -->
+                <div class="content">
+                    <div class="content__user">
+                        <div class="content__user-info">
+                            <div class="content__user-avatar">
+                                <div class="content__user-img"
+                                    style="background: url(./assets/img/avatars/vanh.jpg) center center / cover no-repeat;">
+                                </div>
+                            </div>
+                            <h3 class="content__user-name">Nguyễn Việt Anh</h3>
+                        </div>
+                        <div class="content__user-btn-container hide-on-mobile">
+                            <button class="content__user-btn content__user-btn-vip">Mua Vip Ngay</button>
+                            <button class="content__user-btn content__user-btn-code">Nhập Code Vip</button>
+                            <button class="content__user-btn content__user-btn--circle">
+                                <span>...</span>
+                                <span class="content__user-option">
+                                    <ion-icon class="content__user-option-icon" name="log-out-outline"></ion-icon>
+                                    <h5 class="content__user-option-name">Đăng xuất</h5>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="content__navigation">
+                        <ul class="content__navigation-list">
+                            <li class="content__navigation-item active">
+                                <span class="content__navigation-name">Tổng quan</span>
+                            </li>
+                            <li class="content__navigation-item">
+                                <span class="content__navigation-name">Bài hát</span>
+                            </li>
+                            <li class="content__navigation-item">
+                                <span class="content__navigation-name">Playlist</span>
+                            </li>
+                            <li class="content__navigation-item hide-on-mobile">
+                                <span class="content__navigation-name">Album</span>
+                            </li>
+                            <li class="content__navigation-item">
+                                <span class="content__navigation-name">MV</span>
+                            </li>
+                            <li class="content__navigation-item hide-on-mobile">
+                                <span class="content__navigation-name">Nghệ sĩ</span>
+                            </li>
+                            <li class="content__navigation-item hide-on-mobile-tablet">
+                                <span class="content__navigation-name">Tải lên</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="content__music">
+                        <div class="content__music-heading">
+                            <h3 class="content__music-heading-title">
+                                <span class="content__music-heading-name">Bài hát</span>
+                                <ion-icon class="content__music-heading-icon" name="chevron-forward-outline"></ion-icon>
+                            </h3>
+                            <div class="content__music-heading-btn-container">
+                                <button class="content__music-heading-btn hide-on-mobile">
+                                    <i class="content__music-heading-btn-icon bi bi-upload"></i>
+                                    <span class="content__music-heading-btn-name">Tải lên</span>
+                                </button>
+                                <button class="content__music-heading-btn content__music-heading-btn-play">
+                                    <ion-icon class="content__music-heading-btn-icon" name="play"></ion-icon>
+                                    <span class="content__music-heading-btn-name">Phát tất cả</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="content__music-container">
+                            <div class="content__song">
+                                <div class="content__song-stack hide-on-mobile">
+                                    <div class="content__song-stack-img">
+                                        <div class="slide"
+                                            style="background: url(./assets/img/slides/slide1.jpg) top center / cover no-repeat;">
+                                        </div>
+                                        <div class="slide"
+                                            style="background: url(./assets/img/slides/slide2.jpg) top center / cover no-repeat;">
+                                        </div>
+                                        <div class="slide"
+                                            style="background: url(./assets/img/slides/slide3.jpg) top center / cover no-repeat;">
+                                        </div>
+                                        <div class="slide"
+                                            style="background: url(./assets/img/slides/slide4.jpg) top center / cover no-repeat;">
+                                        </div>
+                                        <div class="slide slide-three"
+                                            style="background: url(./assets/img/slides/slide5.jpg) top center / cover no-repeat;">
+                                        </div>
+                                        <div class="slide slide-two"
+                                            style="background: url(./assets/img/slides/slide6.jpg) top center / cover no-repeat;">
+                                        </div>
+                                        <div class="slide slide-one"
+                                            style="background: url(./assets/img/slides/slide7.jpg) top center / cover no-repeat;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="content__song-playlist-container">
+                                    <ul class="content__song-playlist"> </ul>
+                                </div>
+                            </div>
+
+                            <div class="content__section content__section-playlist"></div>
+
+                            <div class="content__section content__section-album"></div>
+
+                            <div class="content__section content__section-mv">
+                            </div>
+
+                            <div class="content__section content__section-artist">
+                                <!-- <h3 class="content__section-heading">
+                                    <a href="#" class="content__section-heading-left">
+                                        <span class="content__section-heading-name">Nghệ sĩ</span>
+                                        <ion-icon class="content__section-heading-icon" name="chevron-forward-outline">
+                                        </ion-icon>
+                                    </a>
+                                    <div class="content__section-heading-right hide-on-mobile-tablet">
+                                        <ion-icon class="content__section-heading-icon" name="chevron-back-outline">
+                                        </ion-icon>
+                                        <ion-icon class="content__section-heading-icon" name="chevron-forward-outline">
+                                        </ion-icon>
+                                    </div>
+                                </h3>
+
+                                <ul class="content__section-list content__section-list-artist">
+                                    <li class="content__section-artist-item">
+                                        <div class="content__section-artist-item-img">
+                                            <div class="content__section-artist-container">
+                                                <div class="content__section-artist-thumb">
+                                                    <div class="content__section-artist-overlay">
+                                                        <span class="content__section-artist-play-btn">
+                                                            <ion-icon class="content__section-artist-play-icon"
+                                                                name="play">
+                                                            </ion-icon>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="content__section-artist-item-info">
+                                            <h5 class="content__section-artist-name">
+                                                Binz
+                                                <ion-icon name="star"></ion-icon>
+                                            </h5>
+                                            <p class="content__section-artist-followed">
+                                                265K quan tâm
+                                            </p>
+                                        </div>
+
+                                        <button class="content__section-artist-item-btn">
+                                            <ion-icon class="content__section-artist-item-btn-icon" name="checkmark">
+                                            </ion-icon>
+                                            ĐÃ QUAN TÂM
+                                        </button>
+                                    </li>
+
+                                </ul> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <div class="footer-left-banner"
+                style="background: url(./assets/img/artistts/artistt1.jpg) center center/cover">
+            </div>
+            <div class="footer-left-text">
+                <h4 class="footer-left-title">Crush</h4>
+                <p class="footer-left-author">WN, Vani, An An</p>
+            </div>
+            <div class="footer-left-options hide-on-mobile-tablet">
+                <span class="switch-color active">
+                    <ion-icon class="footer-left-options-btn" name="heart"></ion-icon>
+                </span>
+                <span>
+                    <ion-icon class="footer-left-options-btn dot-btn" name="ellipsis-horizontal"></ion-icon>
+                </span>
+            </div>
+        </div>
+        <div class="footer-center stopped ">
+            <div class="footer-center-btn-controls">
+                <span class="footer-center-btn footer-center-btn-random switch-color hide-on-mobile">
+                    <ion-icon class="footer-center-btn-icon" name="shuffle"></ion-icon>
+                </span>
+                <span class="footer-center-btn footer-center-btn-prev ">
+                    <ion-icon class="footer-center-btn-icon" name="play-skip-back"></ion-icon>
+                </span>
+                <span class="footer-center-btn footer-center-btn-play stopped">
+                    <ion-icon class="footer-center-btn-icon" name="play"></ion-icon>
+                    <ion-icon class="footer-center-btn-icon" name="pause"></ion-icon>
+                </span>
+                <span class="footer-center-btn footer-center-btn-next">
+                    <ion-icon class="footer-center-btn-icon" name="play-skip-forward"></ion-icon>
+                </span>
+                <span class="footer-center-btn footer-center-btn-repeat switch-color hide-on-mobile">
+                    <ion-icon class="footer-center-btn-icon" name="repeat"></ion-icon>
+                </span>
+            </div>
+            <div class="footer-center-progress hide-on-mobile">
+                <span class="footer-center-time">00:00</span>
+                <input type="range" value="0" step="1" min="0" max="100" id="progress-bar" class="progress-bar">
+                <span class="footer-center-time footer-center-time-duration">03:18</span>
+            </div>
+            <audio id="audio" src=""></audio>
+        </div>
+        <div class="footer-right hide-on-mobile">
+            <div class="footer-right-item footer-right-video hide-on-mobile-tablet">
+                <ion-icon class="footer-right-icon" name="videocam-outline"></ion-icon>
+            </div>
+            <div class="footer-right-item footer-right-mic switch-color  hide-on-mobile-tablet">
+                <ion-icon class="footer-right-icon" name="mic-outline"></ion-icon>
+                <ion-icon class="footer-right-icon" name="mic-off-outline"></ion-icon>
+            </div>
+            <div class="footer-right-item footer-right-volumn switch-color">
+                <ion-icon class="footer-right-icon" name="volume-high-outline"></ion-icon>
+            </div>
+            <input type="range" value="50" step="1" min="0" max="100" class="volume-bar" id="volume-bar">
+            <div class="footer-right-item footer-right-options ">
+                <ion-icon class="footer-right-icon" name="list-outline"></ion-icon>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <input type="checkbox" id="check-for-modal" class="check-for-modal">
+    <div class="modal">
+        <div class="modal__container">
+            <h3 class="modal__container-heading">
+                <span class="modal__container-heading-name">
+                    Giao Diện
+                </span>
+                <ion-icon class="modal__container-heading-icon" name="close-outline"></ion-icon>
+            </h3>
+
+            <div class="modal__container-content grid">
+                <!-- <div class="theme__container">
+                        <h3 class="theme__type">Chủ đề</h3>
+                        <div class="row theme__list">
+                            <div class="col l-2-4 theme__item-container">
+                                <div class="theme__item-overlay">
+                                    <div class="theme__item"
+                                        style="background: url(./assets/img/modalThemes/modalTheme1/theme2.jpg) no-repeat center center / contain ; ">
+                                    </div>
+                                    <div class="theme__button-overlay">
+                                        <div class="theme__button-container">
+                                            <button class="theme__button theme__button-apply">Áp dụng</button>
+                                            <button class="theme__button theme__button-preview">Xem trước</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="theme__name">Tháp Effel</p>
+                            </div>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    <script>
+        var index = 1;
+        var pos = 0;
+
+        const slideList = document.querySelectorAll('.slide');
+        const len = slideList.length;
+        setInterval(function () {
+            document.querySelector('.slide-one').style.zIndex = pos - 1;
+            document.querySelector('.slide-one').classList.remove('slide-one');
+
+            document.querySelector('.slide-two').classList.remove('slide-two');
+
+            document.querySelector('.slide-three').classList.remove('slide-three');
+            if (index > len) {
+                index -= len;
+            }
+            let temp = len - index > 0 ? len - index : len - index + len;
+            let temp1 = temp - 1 > 0 ? temp - 1 : temp - 1 + len;
+            let temp2 = temp - 2 > 0 ? temp - 2 : temp - 2 + len;
+
+            slideList[temp - 1].classList.add('slide-one');
+            slideList[temp1 - 1].classList.add('slide-two');
+            slideList[temp2 - 1].classList.add('slide-three');
+            index++;
+            pos--;
+        }, 1500)
+
+
+    </script>
+    <script type="module" src="./data/theme.js"></script>
+    <script type="module" src="./data/song.js"></script>
+    <script type="module" src="./data/playlist.js"></script>
+    <script type="module" src="./data/album.js"></script>
+    <script type="module" src="./data/mv.js"></script>
+    <script type="module" src="./data/artist.js"></script>
+    <script type="module" src="main.js"></script>
+
+</body>
+
+</html>
