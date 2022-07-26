@@ -542,6 +542,7 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.2);
   display: none;
+  z-index: 10;
 }
 
 .check-for-modal:checked ~ .modal {
@@ -1046,7 +1047,7 @@
 }
 .content__song-playlist-item.play .content__song-playlist-label,
 .content__song-playlist-item:hover .content__song-playlist-label {
-  background-color: var(--layout-background-color);
+  background-color: var(--current-song-color);
   cursor: pointer;
 }
 

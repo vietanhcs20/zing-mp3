@@ -30,6 +30,7 @@ li {
   --conten-text-hover-color: #c662ef;
   --footer-background-color: #202020;
   --header-background-color: #282828;
+  --current-song-color: rgba(200, 200, 200, 0.2);
 
   --header-height: 70px;
   --footer-play-height: 90px;

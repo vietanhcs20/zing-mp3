@@ -123,9 +123,10 @@
   }
 
   .header {
-    left: 30px;
-    right: 30px;
-    padding: 0;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    padding: 0 30px;
   }
 
   .sidebar {

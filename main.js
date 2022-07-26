@@ -1,4 +1,3 @@
-import { modalThemesList } from "./data/theme.js";
 import { songList } from "./data/song.js";
 
 
@@ -68,8 +67,10 @@ const app = {
     loadSong() {
         const src = this.playlist[this.currentIndex].song;
         audio.src = src;
+        this.updateInfo();
+    },
+    changeSong() {
         audio.currentTime = this.currentTime;
-
         audio.onloadeddata = () => {
             songDuration.innerText = this.caculateTime(audio.duration);
             let percent = Math.floor(audio.currentTime / audio.duration) * 100;
@@ -78,8 +79,8 @@ const app = {
     },
 
     playSong() {
-        this.loadSong();
-        if (Array.from(playBtn.classList).includes('stopped')) {
+        this.changeSong();
+        if (playBtn.classList.contains('stopped')) {
             playBtn.classList.remove('stopped')
             controlPlace.classList.remove('stopped')
         }
@@ -98,25 +99,28 @@ const app = {
         else {
             ++this.currentIndex;
         }
-
+        this.loadSong();
         this.playSong();
     },
     prevSong() {
         this.currentTime = 0;
-        if (this.currentIndex < 0) {
+        if (this.currentIndex == 0) {
             this.currentIndex = this.playlist.length - 1;;
         }
         else {
             --this.currentIndex;
         }
-        console.log(this.currentIndex)
-
+        this.loadSong();
         this.playSong();
     },
 
     handleEvents: function () {
-        this.updateInfo();
-        this.loadSong()
+        window.onkeydown = e => {
+            if (e.code === 'Space')
+                playBtn.click();
+        }
+        this.loadSong();
+        this.changeSong();
         audio.volume = this.currentVolume / 100;
         const _this = this;
         // Xử lý border radius cho input
@@ -207,7 +211,7 @@ const app = {
             e.stopPropagation();
             this.classList.toggle('stopped')
             controlPlace.classList.toggle('stopped')
-            if (Array.from(controlPlace.classList).includes('stopped')) {
+            if (controlPlace.classList.contains('stopped')) {
                 _this.stopSong();
             }
             else {
@@ -223,70 +227,74 @@ const app = {
             }
         })
 
+        // Click songs
         songs.forEach(song => {
             song.onclick = (e) => {
                 const index = e.target.closest('.content__song-playlist-item').dataset.index;
                 if (index != this.currentIndex) {
-                    if (Array.from(playBtn.classList).includes('stopped')) {
+                    if (playBtn.classList.contains('stopped')) {
                         playBtn.classList.remove('stopped')
                         controlPlace.classList.remove('stopped')
                     }
                     this.currentIndex = index;
                     this.currentTime = 0;
-                    this.updateInfo();
+                    this.loadSong();
                     this.playSong()
                 }
             };
         })
 
-        audio.ontimeupdate = () => {
+        //Function for timeupdate event
+        const timeUpdate = () => {
             this.currentTime = audio.currentTime;
             const percent = Math.floor(this.currentTime / audio.duration * 100);
             progressBar.value = percent;
             currentTime.innerText = this.caculateTime(audio.currentTime)
         }
+        audio.addEventListener('timeupdate', timeUpdate)
 
-        progressBar.oninput = () => {
+
+        progressBar.onmousedown = () => {
+            audio.removeEventListener('timeupdate', timeUpdate);
+        }
+
+        progressBar.onmouseup = () => {
+            audio.addEventListener('timeupdate', timeUpdate);
+        }
+
+        progressBar.onchange = () => {
             let percent = progressBar.value;
             let time = percent * audio.duration / 100;
-            audio.currentTime = time;
             this.currentTime = time;
             this.playSong();
         }
 
+        progressBar.oninput = () => {
+            let percent = progressBar.value;
+            let time = percent * audio.duration / 100;
+            currentTime.innerText = this.caculateTime(time)
+        }
+
         audio.onended = () => {
             this.nextSong();
-            this.updateInfo();
         }
 
         nextBtn.onclick = () => {
             this.nextSong();
-            this.updateInfo();
         }
 
         prevBtn.onclick = () => {
             this.prevSong();
-            this.updateInfo();
         }
 
         repeatBtn.onclick = () => {
             repeatBtn.classList.toggle('active')
-            if (Array.from(repeatBtn.classList).includes('active')) {
-                this.isReapeat = true;
-            }
-            else {
-                this.isReapeat = false;
-            }
+            this.isRepeat = repeatBtn.classList.contains('active') ? true : false;
         }
 
         randomBtn.onclick = () => {
             randomBtn.classList.toggle('active')
-            if (Array.from(randomBtn.classList).includes('active')) {
-                this.isRandom = true;
-            }
-            else {
-                this.isRandom = false;
-            }
+            this.isRandom = randomBtn.classList.contains('active') ? true : false;
         }
 
         volumeBar.oninput = () => {
@@ -297,12 +305,7 @@ const app = {
 
         muteBtn.onclick = function () {
             this.classList.toggle('active')
-            if (Array.from(this.classList).includes('active')) {
-                audio.muted = true;
-            }
-            else {
-                audio.muted = false;
-            }
+            audio.muted = this.classList.contains('active') ? true : false;
         }
     },
 
